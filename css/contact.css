@@ -1,32 +1,71 @@
 /* contact.css */
 
 body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
 }
 
-.bg-black {
-    background-color: #000 !important;
+.hero-section {
+    background-image: url('https://via.placeholder.com/1920x600');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    position: relative;
 }
 
-.form-label {
-    font-weight: 500;
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
 }
 
-.border {
-    border-color: #dee2e6 !important;
+.hero-content {
+    position: relative;
+    z-index: 1;
 }
 
-.btn-dark {
-    background-color: #212529;
-    border-color: #212529;
+.contact-info-card {
+    transition: transform 0.3s ease-in-out;
 }
 
-.btn-dark:hover {
-    background-color: #1c1f23;
-    border-color: #1a1e21;
+.contact-info-card:hover {
+    transform: translateY(-10px);
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
 
 #map {
     height: 400px;
     width: 100%;
+    border-radius: 10px;
+}
+
+.faq-section {
+    background-color: #e9ecef;
+    padding: 50px 0;
+}
+
+/* Estilos adicionales para mejorar la responsividad */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 50px 0;
+    }
+    
+    .contact-info-card {
+        margin-bottom: 20px;
+    }
 }
